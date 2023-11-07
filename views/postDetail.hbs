@@ -1,0 +1,18 @@
+<h2>{{post.title}}</h2>
+<p>{{post.body}}</p>
+
+
+<h3>Post Comments</h3>
+<div id="comments">
+  {{#each post.comments}}
+    <p>{{this}}</p>
+  {{/each}}
+</div>
+
+<!-- Thêm bình luận -->
+<form id="comment-form" data-post-id="{{post.id}}">
+  <input type="text" id="comment-text" name="comment" placeholder="Add a comment">
+  <button type="submit">Comment</button>
+</form>
+
+<button type="submit"><a href="/posts/{{post.id}}">Main Page</a></button>

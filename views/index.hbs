@@ -1,0 +1,11 @@
+<h1>Welcome to the Blog</h1>
+<a href="/posts/new" style="color: blue;">Create Post</a>
+
+{{#each posts}}
+  <div class="post">
+    <h2><a href="/posts/{{this.id}}" style="color: black;">{{this.title}}</a></h2>
+    <p>{{this.body}}</p>
+  </div>
+{{else}}
+  <p>No posts to display.</p>
+{{/each}}
